@@ -14,7 +14,7 @@
 
 <style>
         body {
-            background-color:Maroon;
+            background-color:rgb(157, 153, 153);
             color: white;
             text-align: center;
             padding-right: 90px;
@@ -36,32 +36,16 @@
             float: right;">
 <div class = "login" style="font-size: 18px">
     <!-- Inputs to our model-->
-<form action="{{ url_for('predict')}} " method="post">
-    <label for="age"> <b>Age (in days) :</b> </label>
-    <input type = "number"  id = "age" name = "age" placeholder = "Age of the concrete" required = "required" />
-    <br><br><br>
-    <label for= "cement"> <b>Cement (in kg) : </b> </label>
-    <input type = "number" step = "0.01" id= "cement" name = "cement" placeholder = "quantity" required = "required" />
-    <br><br><br>
-    <label for="water"> <b>Water (in kg) :</b></label>
-    <input type = "number" step = "0.01" id = "water" name = "water" placeholder = "quantity " required = "required" />
-    <br><br><br>
-    <label for="fly_ash"><b>Fly ash (in kg) :</b></label>
-    <input type = "number" step = "0.01" id = "fly_ash" name = "fa" placeholder= "quantity " required = "required" />
-    <br><br><br>
-    <label for="superplasticizer"> <b>Superplasticizer (in kg) :</b></label>
-    <input type = "number" step = "0.01" id = "superplasticizer" name="sp" placeholder = "quantity " required = "required" />
-    <br><br><br>
-    <label for="blast_furnace_slag"> <b>Blast furnace slag (in kg) :</b> </label>
-    <input type = "number" step = "0.01" id = "blast_furnace_slag" name = "bfs" placeholder = "quantity " required = "required" />
-    <br><br><br>
-
-    <button type="submit" class="btn btn-primary btn-block btn-large" style="padding: 10px 15px" >Predict</button>
-    {{ prediction_text }}
-    <br><br>
-
+<form action="{{ url_for('predict')}}" method="post">
+    <input type="number" name="age" placeholder="Age" required>
+    <input type="number" name="cement" placeholder="Cement" required>
+    <input type="number" name="water" placeholder="Water" required>
+    <input type="number" name="fly_ash" placeholder="Fly Ash" required>
+    <input type="number" name="superplasticizer" placeholder="Superplasticizer" required>
+    <input type="number" name="blast_furnace_slag" placeholder="Blast Furnace Slag" required>
+    <input type="submit" value="Predict">
 </form> <br><br><br><br><br>
-    <footer class="button"><f> Designed by <a href="https://www.linkedin.com/in/svsriramerramilli/" style="text-align: center;" > S V Sriram Erramilli </a>  |  <a href="https://commons.wikimedia.org/wiki/File:Compressive_strength_test.gif#/media/File:Compressive_strength_test.gif" style="text-align: right;"> GIF source </a> </f></footer>
+    <footer class="button"><f> Designed by <a href="https://www.linkedin.com/in/sanket-jagtap-966116283/" style="text-align: center;" > Sanket Jagtap </a>  |  <a href="https://commons.wikimedia.org/wiki/File:Compressive_strength_test.gif#/media/File:Compressive_strength_test.gif" style="text-align: right;"> GIF source </a> </f></footer>
     <!--footer class="button"></footer-->
 
 
@@ -77,6 +61,12 @@ a:link, a:visited {
 </div>
 
 
+
+{% if show_result %}
+<div id="result">
+    <h2>{{ prediction_text }}</h2>
+</div>
+{% endif %}
 
 </body>
 </html>

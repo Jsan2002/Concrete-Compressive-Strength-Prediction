@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Compressive Strength Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css', v=1) }}">
+</head>
+<body>
+    <div class="content">
+        <h1>Concrete Compressive Strength Prediction</h1>
+        
+        <p>Debug Info: This page was rendered at {{ now() }}</p>
+        
+        <h2>Project Description</h2>
+        <p>This project aims to predict the compressive strength of concrete based on its components and age. The prediction is made using a machine learning model trained on historical data.</p>
+        
+        <img src="{{ url_for('static', filename='Compressive_strength_test.gif') }}" alt="Concrete Compressive Strength Test" style="max-width: 100%; height: auto;">
+        
+        <h2>Components</h2>
+        <ul>
+            <li>Age: The age of the concrete in days</li>
+            <li>Cement: Amount of cement in kg in a m3 mixture</li>
+            <li>Water: Amount of water in kg in a m3 mixture</li>
+            <li>Fly Ash: Amount of fly ash in kg in a m3 mixture</li>
+            <li>Superplasticizer: Amount of superplasticizer in kg in a m3 mixture</li>
+            <li>Blast Furnace Slag: Amount of blast furnace slag in kg in a m3 mixture</li>
+        </ul>
+        
+        <div class="button-container">
+            <a href="{{ url_for('predict') }}" class="button">Go to Prediction Page</a>
+        </div>
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/sanket-jagtap-966116283/" target="_blank">
+            <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+        </a>
+        <a href="https://www.kaggle.com/sanketjagtap2002" target="_blank">
+            <img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle">
+        </a>
+        <a href="https://github.com/Jsan2002" target="_blank">
+            <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+        </a>
+    </div>
+</body>
+</html>

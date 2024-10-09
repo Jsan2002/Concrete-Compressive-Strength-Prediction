@@ -1,4 +1,3 @@
-
 # Concrete Compressive Strength Prediction
 
 The quality of concrete is determined by its compressive strength, which is measured using a conventional crushing test on a concrete cylinder. The strength of the concrete is also a vital aspect in achieving the requisite longevity. It will take 28 days to test strength, which is a long period.
@@ -30,34 +29,51 @@ Deployed on web using Heroku (PaaS)
 url:- https://ccs-predictor.herokuapp.com/
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/22242325/134782546-83e740aa-c0c5-45d9-a302-6f30b4362d7e.png)
+![image](https://drive.google.com/file/d/1GnMPKNcZA5gRpGDMYOkYgDY8rtwbJmDV/view?usp=sharing)
 
 ## Tools and technologies used
 
-![tools and technologies used](https://user-images.githubusercontent.com/22242325/135045139-7e9e2bdd-ae1a-43f7-9c8b-5d12e4a4cd62.png)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white)
+![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-%23FF6F00.svg?style=for-the-badge&logo=XGBoost&logoColor=white)
+![Random Forest](https://img.shields.io/badge/Random%20Forest-%23FF6F00.svg?style=for-the-badge&logo=Random%20Forest&logoColor=white)
+![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
+
 
 ## High level design
-URL:- https://drive.google.com/file/d/1ucWKT8LXsr2k-9X83UA5YjB7GSRxY8ND/view?usp=sharing
+URL:- 
 
 ## Low level design
-URL:- https://drive.google.com/file/d/1ZztcOqvvFe7Xhjhhljnpu4OqfbQvj6iW/view?usp=sharing
+URL:- 
 
 ## Architecture
-URL:- https://drive.google.com/file/d/1IfsVoRv1WqYB4qZYLT9LBTiUF1HLZ3q_/view?usp=sharing
+URL:- 
 
 ## Detailed project report
-URL:- https://drive.google.com/file/d/1LyuLnu5ZlIX-V6vVvLUggRfnnskqufZ5/view?usp=sharing
+URL:- 
 
 ## Wireframe document
-URL:- https://drive.google.com/file/d/1XmkH9p1uVLYUY-y6-mSRiJZhf-WhXuJ1/view?usp=sharing
+URL:- 
 
 ## Demo video
-URL:- https://youtu.be/k0VswDZ1waA
+URL:- 
 
   
 ## References
  
- - [Testing the compressive strength of a concrete in laboratory](https://www.youtube.com/watch?v=t4RDdn6rOwU&ab_channel=Anime_Edu-CivilEngineeringVideos) 
+ - [Testing the compressive strength of a concrete in laboratory](https://www.youtube.com/shorts/RMdYjRI-1-c)
+ (https://www.youtube.com/watch?v=t4RDdn6rOwU&ab_channel=Anime_Edu-CivilEngineeringVideos) 
  - [Concrete Basics: Essential Ingredients For A Concrete Mixture](https://concretesupplyco.com/concrete-basics/)
  - [Applications of Fly ash](https://www.thespruce.com/fly-ash-applications-844761)
  - [Blast furnace slag cement](https://theconstructor.org/concrete/blast-furnace-slag-cement/23534/)
@@ -68,8 +84,69 @@ URL:- https://youtu.be/k0VswDZ1waA
  - [Post pruning technique in Decision tree algorithm ](https://towardsdatascience.com/3-techniques-to-avoid-overfitting-of-decision-trees-1e7d3d985a09)
  - [Hyper parameter tuning in XGBoost ](https://xgboost.readthedocs.io/en/latest/tutorials/param_tuning.html)
  - [HTML, CSS tutorials ](https://www.w3schools.com/)
-## Author
 
-- Sesha Venkata Sriram Erramilli [LinkedIn](https://www.linkedin.com/in/svsriramerramilli/)
 
-  
+## How to Run
+
+To set up and run this project locally, follow these steps:
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/concrete-compressive-strength-prediction.git
+   cd concrete-compressive-strength-prediction
+   ```
+
+2. Create a virtual environment (optional but recommended):
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+4. Run the Flask application:
+   ```
+   python app.py
+   ```
+
+5. Open your web browser and navigate to `http://localhost:5000` to access the application.
+
+## Contributing
+
+We welcome contributions to improve this project! Here are some ways you can contribute:
+
+1. Report bugs or suggest features by opening an issue.
+2. Improve documentation by submitting pull requests.
+3. Add new features or fix bugs by forking the repository and submitting a pull request.
+
+Please ensure that your code adheres to the existing style and that all tests pass before submitting a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+MIT License
+
+Copyright (c) 2023 Sanket Jagtap
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+

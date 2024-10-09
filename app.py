@@ -1,56 +1,95 @@
-# import pickle
+from flask import Flask, render_template, request, jsonify
 import joblib
-import numpy as np
 import pandas as pd
-from flask import Flask, render_template, request
-# import logging
+from datetime import datetime
+import os
 
-"""Application logging"""
+app = Flask(__name__, static_folder='static')
 
-# logging.basicConfig(filename='deployment_logs.log', level=logging.INFO,
-#                     format='%(levelname)s:%(asctime)s:%(message)s')  # configuring logging operations
+# Load the model once when the app starts
+model = joblib.load('XGBoost_Regressor_model.pkl')
 
-app = Flask(__name__)
+# Define expected columns and their types
+EXPECTED_COLUMNS = ['age', 'cement', 'water', 'fly_ash', 'superplasticizer', 'blast_furnace_slag']
+COLUMN_TYPES = {col: float for col in EXPECTED_COLUMNS}
 
-# model = pickle.load(open(r'models\XGBoost_Regressor_model.pkl','rb'))  # loading the saved XGBoost_regressor model
-# model = pickle.load(open('models\XGBoost_Regressor_model.pkl','rb'))  # loading the saved XGBoost_regressor model
-model = joblib.load('XGBoost_Regressor_model.pkl')  # loading the saved XGBoost_regressor model
+@app.context_processor
+def inject_now():
+    return {'now': datetime.utcnow}
 
 @app.route('/')
 def home():
-    return render_template('index.html')
-
+    return render_template('home.html')
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
-    """
-    For rendering results on HTML GUI
+    if request.method == 'POST':
+        try:
+            input_data = request.form.to_dict()
 
-    """
-    if request.method == "POST":
-        # ['age', 'cement', 'water', 'fly_ash', 'superplasticizer', 'blast_furnace_slag']
-        f_list = [request.form.get('age'), request.form.get('cement'), request.form.get('water'),
-                  request.form.get('fa'),
-                  request.form.get('sp'), request.form.get('bfs')]  # list of inputs
+            # Validate input
+            if not all(col in input_data for col in EXPECTED_COLUMNS):
+                return render_template('predict.html',
+                                       prediction_text="Error: Missing input fields.",
+                                       show_result=True)
 
-        # logging operation
-#         logging.info(f"Age (in days): {f_list[0]}, Cement (in kg): {f_list[1]},"
-#                      f"Water (in kg): {f_list[2]}, Fly ash (in kg): {f_list[3]},"
-#                      f"Superplasticizer (in kg): {f_list[4]}, Blast furnace slag (in kg): {f_list[5]}")
+            # Create DataFrame and convert types in one step
+            df = pd.DataFrame([input_data])
+            df = df.astype(COLUMN_TYPES)
 
-        final_features = np.array(f_list).reshape(-1, 6)
-        df = pd.DataFrame(final_features)
+            # Check for any NaN values after conversion
+            if df.isnull().any().any():
+                return render_template('predict.html',
+                                       prediction_text="Error: Invalid input. Please ensure all fields contain numeric values.",
+                                       show_result=True)
 
+            # Make prediction
+            prediction = model.predict(df)
+            result = f"{prediction[0]:.2f}"
+
+            return render_template('predict.html',
+                                   prediction_text=f"The Concrete compressive strength is {result} MPa",
+                                   show_result=True)
+
+        except Exception as e:
+            print(f"An error occurred: {str(e)}")
+            return render_template('predict.html',
+                                   prediction_text="An error occurred while processing your request.",
+                                   show_result=True)
+    
+    # If it's a GET request, just show the prediction form
+    return render_template('predict.html', show_result=False)
+
+@app.route('/api/predict', methods=['POST'])
+def api_predict():
+    try:
+        input_data = request.json
+
+        # Validate input
+        if not all(col in input_data for col in EXPECTED_COLUMNS):
+            return jsonify({"error": "Missing input fields"}), 400
+
+        # Create DataFrame and convert types in one step
+        df = pd.DataFrame([input_data])
+        df = df.astype(COLUMN_TYPES)
+
+        # Check for any NaN values after conversion
+        if df.isnull().any().any():
+            return jsonify({"error": "Invalid input. Please ensure all fields contain numeric values"}), 400
+
+        # Make prediction
         prediction = model.predict(df)
-        result = "%.2f" % round(prediction[0], 2)
+        result = float(prediction[0])
 
-        # logging operation
-#         logging.info(f"The Predicted Concrete Compressive strength is {result} MPa")
+        return jsonify({"prediction": result})
 
-#         logging.info("Prediction getting posted to the web page.")
-        return render_template('index.html',
-                               prediction_text=f"The Concrete compressive strength is {result} MPa")
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
+@app.route('/feature_description')
+def feature_description():
+    return render_template('feature_description.html')
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)

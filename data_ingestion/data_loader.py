@@ -8,7 +8,7 @@ logging.basicConfig(filename='development_logs.log', level=logging.INFO,
 
 class DataLoad:
     """ This class is used to fetch data for the training.
-    Author: Sesha Venkata Sriram Erramilli 😊
+    Author: Sanket Jagtap
     """
 
     def __init__(

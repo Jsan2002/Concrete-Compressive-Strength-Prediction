@@ -12,7 +12,7 @@ logging.basicConfig(filename='development_logs.log', level=logging.INFO,
 
 class LinearRegressionWithFeatureSelection:
     """This class is used build Linear regression models with only the relevant features.
-    Author: Sesha Venkata Sriram Erramilli 😊
+    Author: Sanket Jagtap
 
     references I referred to:-
     reference_1: https://towardsdatascience.com/feature-selection-with-pandas-e3690ad8504b
@@ -161,7 +161,8 @@ class LinearRegressionWithFeatureSelection:
 
 class Lasso:
     """This class is used to train the models using Linear regression with Lasso regularization or L1 regularization.
-    Author: Sesha Venkata Sriram Erramilli 😊
+    Author: Sanket Jagtap
+
 
     parameters
     ---------------------------------

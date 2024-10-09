@@ -10,7 +10,7 @@ logging.basicConfig(filename='development_logs.log', level=logging.INFO,
 
 class DataPreprocessor:
     """This class is used to preprocess the data for modelling
-    Author: Sesha Venkata Sriram Erramilli 😊
+    Author: Sanket Jagtap
 
     parameters
     _________________________________________
