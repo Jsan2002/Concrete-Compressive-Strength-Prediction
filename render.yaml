@@ -7,9 +7,5 @@ services:
     plan: starter
     buildCommand: npm run build
     startCommand: npm start
-    envVars:
-      NODE_ENV: production
-    autoDeploy: true
-    regions:
-      - us-west-2
+    
 
