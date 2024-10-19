@@ -6,6 +6,7 @@ import os
 
 app = Flask(__name__, static_folder='static')
 
+
 # Load the model once when the app starts
 model = joblib.load('XGBoost_Regressor_model.pkl')
 
