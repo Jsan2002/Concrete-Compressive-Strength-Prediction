@@ -1,0 +1,16 @@
+# render.yaml
+
+services:
+  - type: web
+    name: my-web-service
+    env: production
+    plan: starter
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      NODE_ENV: production
+      DATABASE_URL: ${DATABASE_URL}
+    autoDeploy: true
+    regions:
+      - us-west-2
+
