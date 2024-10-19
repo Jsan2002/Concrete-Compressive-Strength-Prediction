@@ -1,0 +1,5 @@
+
+# ecr repo to store/ save docker image
+717279727123.dkr.ecr.ap-south-1.amazonaws.com               /sanket
+
+
