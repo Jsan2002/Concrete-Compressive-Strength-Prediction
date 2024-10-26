@@ -27,9 +27,6 @@ So, now we can find the Concrete compressive strength quickly by just passing th
 ## Web Deployment
 Deployed on web using koyeb (PaaS) 
 url:- https://eventual-elnore-sanketjagtap-7e11777b.koyeb.app/
-## Screenshots
-
-![image](https://drive.google.com/file/d/1GnMPKNcZA5gRpGDMYOkYgDY8rtwbJmDV/view?usp=sharing)
 
 ## Tools and technologies used
 
