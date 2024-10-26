@@ -37,8 +37,9 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-#development and deployment logs
+# Development and deployment logs
 *.logs
+deployment_logs.log  # Explicitly ignore deployment logs
 
 # Unit test / coverage reports
 htmlcov/
