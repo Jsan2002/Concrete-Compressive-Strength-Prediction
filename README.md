@@ -50,19 +50,19 @@ url:- https://eventual-elnore-sanketjagtap-7e11777b.koyeb.app/
 
 
 ## High level design
-URL:- 
+URL:- https://github.com/Jsan2002/Concrete-Compressive-Strength-Prediction/blob/main/High%20Level%20Design%20(HLD)%20.pdf
 
 ## Low level design
-URL:- 
+URL:- https://github.com/Jsan2002/Concrete-Compressive-Strength-Prediction/blob/main/Low%20Level%20Design%20(LLD).pdf
 
 ## Architecture
-URL:- 
+URL:- https://github.com/Jsan2002/Concrete-Compressive-Strength-Prediction/blob/main/Architecture%20doc.pdf
 
 ## Detailed project report
-URL:- 
+URL:- https://github.com/Jsan2002/Concrete-Compressive-Strength-Prediction/blob/main/Detailed%20Project%20Report%20(DPR).pdf
 
 ## Wireframe document
-URL:- 
+URL:- https://github.com/Jsan2002/Concrete-Compressive-Strength-Prediction/blob/main/Wireframe%20Documentation.pdf
 
 ## Demo video
 URL:-https://youtu.be/21mvK42_ubg?si=iUE7F5i9W3RVxO0p 
