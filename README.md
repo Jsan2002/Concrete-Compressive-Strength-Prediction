@@ -18,7 +18,7 @@ I solved this problem using Data science and Machine learning technology, develo
     - Next, tried with various tree based models, performed hyper parameter tuning using the Randomized SearchCV and found the best hyperparameters for each model. Then, picked the top most features as per the feature importance by an each model, recorded that info into a "relevant_features_by_models.csv" file into the "results" directory. Built models, evaluated on both the training and testing data and recorded the performance metrics in the "Performance of algorithms.csv" file in the "results" directory.
     - Based on the performance metrics of both the linear and the tree based models, XGBoost regressor performed the best, followed by the random forest regressor. Saved these two models into the "models" directory.
 4. Deployment:
-    Deployed the XGBoost regressor model using Flask, which works in the backend part while for the frontend UI Web page, used HTML5.
+    Deployed the XGBoost regressor model using Koyeb, which works in the backend part while for the frontend UI Web page, used HTML5.
 
 At each step in both development and deployment parts, logging operation is performed which are stored in the development_logs.log and deployment_logs.log files respectively. 
 
@@ -26,8 +26,8 @@ So, now we can find the Concrete compressive strength quickly by just passing th
 
 
 ## Web Deployment
-Deployed on web using koyeb (PaaS) 
-url:- https://eventual-elnore-sanketjagtap-7e11777b.koyeb.app/
+Deployed on web using koyeb (💻✅,📱❌) (PaaS) 
+url:-  https://eventual-elnore-sanketjagtap-7e11777b.koyeb.app/
 
 ## Tools and technologies used
 
