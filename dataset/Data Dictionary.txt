@@ -27,3 +27,5 @@ Superplasticizer (component 5) -- quantitative -- kg in a m3 mixture -- Input Va
 Coarse Aggregate (component 6) -- quantitative -- kg in a m3 mixture -- Input Variable
 Fine Aggregate (component 7) -- quantitative -- kg in a m3 mixture -- Input Variable
 Age -- quantitative -- Day (1~365) -- Input Variable
+
+
