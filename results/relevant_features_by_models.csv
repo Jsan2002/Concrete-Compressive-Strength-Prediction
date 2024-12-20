@@ -10,3 +10,6 @@ Random Forest regressor,"['age', 'cement', 'water', 'blast_furnace_slag', 'super
 Adaboost regressor,"['cement', 'age', 'water', 'blast_furnace_slag', 'superplasticizer', 'fine_aggregate ', 'coarse_aggregate']"
 Gradient Boost regressor,"['age', 'cement', 'water', 'blast_furnace_slag']"
 XGBoost regressor,"['age', 'cement', 'water', 'fly_ash', 'superplasticizer', 'blast_furnace_slag']"
+
+
+
