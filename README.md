@@ -70,6 +70,10 @@ URL:- https://github.com/Jsan2002/Concrete-Compressive-Strength-Prediction/blob/
 ## Demo video
 URL:-https://youtu.be/21mvK42_ubg?si=iUE7F5i9W3RVxO0p 
 
+## Internship letter 
+[Internship Experience Letter (CCSP).pdf](https://github.com/user-attachments/files/18272225/Internship.Experience.Letter.CCSP.pdf)
+
+
   
 ## References
  
