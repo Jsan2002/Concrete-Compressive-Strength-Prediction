@@ -28,10 +28,6 @@ At each step in both development and deployment parts, logging operation is perf
 So, now we can find the Concrete compressive strength quickly by just passing the quantities of the raw materials as an input to the web application 😊. 
 
 
-## Web Deployment
-Deployed on web using koyeb (💻✅,📱❌) (PaaS) 
-url:-  https://eventual-elnore-sanketjagtap-7e11777b.koyeb.app/
-
 ## Tools and technologies used
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
